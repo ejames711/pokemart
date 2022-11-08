@@ -12,7 +12,6 @@ module.exports = {
         light_blue: "#B1D0E0",
       },
     },
-    
   },
   plugins: [],
 }

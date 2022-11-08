@@ -19,7 +19,7 @@ function Nav() {
                 />
               </div>
               <div className="hidden md:block">
-                <div className="flex items-baseline ml-10 space-x-4">
+                <div className="flex items-baseline justify-center ml-10 space-x-4">
                   <a
                     href="#"
                     className="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
