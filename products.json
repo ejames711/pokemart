@@ -36,7 +36,7 @@
     },
     {
         "name": "Incense",
-        "description": "Dont spend your time pacing in grass. Bring the Pokemon to you.",
+        "description": "Dont spend your time pacing in tall grass. Bring the Pokemon to you.",
         "image": "/assets/incense/incense.png"
     }
 ]
