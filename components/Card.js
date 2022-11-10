@@ -24,8 +24,8 @@ export default function Card({name,description,image}){
 
     return(
         <div className="flex flex-col items-center text-center rounded shadow-md justify-evenly w-52 h-80 bg-light_blue">
-            <div className="w-2/3 bg-white rounded h-1/3">
-                <Image src={""} height={40} width={40} />
+            <div className="flex items-center justify-center w-2/3 bg-white rounded h-1/3">
+                <Image src={image} height={96} width={96} alt={name}/>
             </div>
             <h1 className="text-xl">{name}</h1>
             <p className="text-sm">{description}</p>
