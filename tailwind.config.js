@@ -11,6 +11,9 @@ module.exports = {
         light_haze : "#6998AB",
         light_blue: "#B1D0E0",
       },
+      fontFamily: {
+        'frag' : 'frag'
+      },
     },
   },
   plugins: [],
