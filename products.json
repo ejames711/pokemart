@@ -1,22 +1,42 @@
 [
     {
         "name": "Pokeball",
-        "description": "The classic. Always there when you need it",
+        "description": "The classic. Always there when you need it.",
         "image": "/assets/red-ball/pokeball.png"
     },
     {
         "name": "Greatball",
-        "description": "Increased catch rates. Affordable and dependable",
+        "description": "Increased catch rates. Affordable and dependable.",
         "image": "/assets/greatball/greatball.png"
     },
     {
         "name": "Ultraball",
-        "description": "The best catch rates. Premium performance and quality",
+        "description": "The best catch rates. Premium performance and quality.",
         "image": "/assets/ultra-ball/ultraball.png"
     },
     {
         "name": "Masterball",
-        "description": "Guaranteed catch. It doesn't get any better than this",
+        "description": "Guaranteed catch. It doesn't get any better than this.",
         "image": "/assets/master-ball/masterball.png"
+    },
+    {
+        "name": "Super Potion",
+        "description": "Keep your pokemon in fighting shape. Instant results.",
+        "image": "/assets/super-potion/super-potion.png"
+    },
+    {
+        "name": "Hyper Potion",
+        "description": "The ultimate situation saver. Keep yourself in the match.",
+        "image": "/assets/hyper-potion/hyper-potion.png"
+    },
+    {
+        "name": "Revive",
+        "description": "For those moments when you thought the fight was already over.",
+        "image": "/assets/revive/revive.png"
+    },
+    {
+        "name": "Incense",
+        "description": "Dont spend your time pacing in grass. Bring the Pokemon to you.",
+        "image": "/assets/incense/incense.png"
     }
 ]

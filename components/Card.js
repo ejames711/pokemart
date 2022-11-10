@@ -29,7 +29,7 @@ export default function Card({name,description,image}){
             </div>
             <h1 className="text-xl font-bold font-frag">{name}</h1>
             <p className="px-2 text-sm font-semibold font-frag">{description}</p>
-            <div className="flex items-center w-full justify-evenly text-light_haze">
+            <div className="flex items-center w-full font-bold text-haze_blue justify-evenly">
                 <button className="flex items-center justify-center w-1/6 h-6 bg-white border-2 rounded-md border-light_haze" onClick={subCount}>-</button>
                 <div className="flex items-center justify-center w-1/3 h-6 bg-white border-2 rounded-md border-light_haze">{count}</div>
                 <button className="flex items-center justify-center w-1/6 h-6 bg-white border-2 rounded-md border-light_haze" onClick={addCount}>+</button>
