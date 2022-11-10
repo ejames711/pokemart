@@ -2,8 +2,8 @@ import Card from './Card'
 
 export default function CardDisplay() {
     return(
-        <div>
-
+        <div className='flex justify-center'>
+            <Card />
         </div>
     )
 }
