@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Pokeball",
+        "description": "The classic. Always there when you need it",
+        "image": "/assets/red-ball/pokeball.png"
+    },
+    {
+        "name": "Greatball",
+        "description": "Increased catch rates. Affordable and dependable",
+        "image": "/assets/greatball/greatball.png"
+    },
+    {
+        "name": "Ultraball",
+        "description": "The best catch rates. Premium performance and quality",
+        "image": "/assets/ultra-ball/ultraball.png"
+    },
+    {
+        "name": "Masterball",
+        "description": "Guaranteed catch. It doesn't get any better than this",
+        "image": "/assets/master-ball/masterball.png"
+    }
+]
