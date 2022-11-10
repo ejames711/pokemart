@@ -15,8 +15,13 @@ export default function CardDisplay() {
     })
 
     return(
-        <div className='flex flex-col items-center justify-center gap-4 px-4 my-6 md:flex-row'>
-            {products}
-        </div>
+        <>
+            <div className='flex flex-col items-center justify-center gap-10 my-4 md:flex-row'>
+                {products.filter((product) => product.key <= 3)}
+            </div>
+            <div className='flex flex-col items-center justify-center gap-10 my-4 md:flex-row'>
+                {products.filter((product) => product.key > 3)}
+            </div>
+        </>
     )
 }
