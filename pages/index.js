@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import About from '../components/About'
 import CardDisplay from '../components/CardDisplay'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <About />
       <CardDisplay/>
+      <Footer />
     </>
   )
 }
