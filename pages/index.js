@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import About from '../components/About'
-import CardDisplay from '../components/cardDisplay'
+import CardDisplay from '../components/CardDisplay'
 
 export default function Home() {
   return (
