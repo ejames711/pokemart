@@ -4,6 +4,7 @@ import Nav from '../components/Nav'
 import About from '../components/About'
 import CardDisplay from '../components/CardDisplay'
 import Footer from '../components/Footer'
+import ProductSearch from '../components/ProductSearch'
 
 export default function Home() {
   return (
