@@ -1,13 +1,20 @@
 import { useState } from "react"
 import Card from './Card'
-import Products from "../products.json"
+import ProductsList from "../products.json"
 import ProductSearch from './ProductSearch'
+import axios from "axios"
 
 export default function CardDisplay() {
 
     const [search, setSearch] = useState("")
+    const [itemName, setItemName] = useState("")
 
-    const filteredProducts = Object.entries(Products)
+    const getItemData = async (name) => {
+        const res = await axios.get(`https://pokeapi.co/api/v2/item/${name.toLowerCase()}/`)
+        console.log(res.data)
+    }
+
+    const filteredProducts = Object.entries(ProductsList)
     .filter(([_, product]) => {
         return(
             product.name.toLowerCase()
@@ -21,11 +28,10 @@ export default function CardDisplay() {
             name={name}
             description={description}
             image={image}
+            getItemData={getItemData}
             />
         ) 
     })
-    
-    console.log(filteredProducts)
 
     return(
         <>
