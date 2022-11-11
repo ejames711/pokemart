@@ -1,9 +1,20 @@
+import { useState } from "react"
 import Card from './Card'
 import Products from "../products.json"
+import ProductSearch from './ProductSearch'
 
 export default function CardDisplay() {
 
-    const products = Object.entries(Products).map(([index, {name,description,image}]) => {
+    const [search, setSearch] = useState("")
+
+    const filteredProducts = Object.entries(Products)
+    .filter(([_, product]) => {
+        return(
+            product.name.toLowerCase()
+            .includes(search.toLowerCase())
+        )
+    })
+    .map(([index, {name,description,image}]) => {
         return(
             <Card 
             key={index}
@@ -13,14 +24,16 @@ export default function CardDisplay() {
             />
         ) 
     })
+    
+    console.log(filteredProducts)
 
     return(
         <>
-            <div className='flex flex-col items-center justify-center gap-10 my-4 md:flex-row'>
-                {products.filter((product) => product.key <= 3)}
-            </div>
-            <div className='flex flex-col items-center justify-center gap-10 my-4 md:flex-row'>
-                {products.filter((product) => product.key > 3)}
+            <ProductSearch setSearch={setSearch}/>
+            <div className="flex flex-col justify-center items-center min-h-[400px]">
+                <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row'>
+                    {filteredProducts}
+                </div>
             </div>
         </>
     )
