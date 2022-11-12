@@ -4,9 +4,18 @@ import Nav from '../components/Nav'
 import About from '../components/About'
 import CardDisplay from '../components/CardDisplay'
 import Footer from '../components/Footer'
-import ProductSearch from '../components/ProductSearch'
+import Modal from '../components/Modal'
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 export default function Home() {
+
+  const [modalOpen, setModalOpen] = useState(false)
+  const[itemData,setItemData] = useState({})
+
+    const close = () => setModalOpen(false)
+    const open = () => setModalOpen(true)
+
   return (
     <>
     <Head>
@@ -18,7 +27,10 @@ export default function Home() {
       <Nav />
       <Header />
       <About />
-      <CardDisplay/>
+      <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} itemData={itemData}/>}
+      </AnimatePresence>
+      <CardDisplay close={close} open={open} modalOpen={modalOpen} setItemData={setItemData}/>
       <Footer />
     </>
   )
