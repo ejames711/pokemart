@@ -4,14 +4,13 @@ import ProductsList from "../products.json"
 import ProductSearch from './ProductSearch'
 import axios from "axios"
 
-export default function CardDisplay() {
+export default function CardDisplay({open,close,modalOpen,setItemData}) {
 
     const [search, setSearch] = useState("")
-    const [itemName, setItemName] = useState("")
 
     const getItemData = async (name) => {
         const res = await axios.get(`https://pokeapi.co/api/v2/item/${name.toLowerCase()}/`)
-        console.log(res.data)
+        setItemData(res.data)
     }
 
     const filteredProducts = Object.entries(ProductsList)
@@ -29,6 +28,9 @@ export default function CardDisplay() {
             description={description}
             image={image}
             getItemData={getItemData}
+            open={open}
+            close={close}
+            modalOpen={modalOpen}
             />
         ) 
     })

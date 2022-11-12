@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Card({name,description,image,getItemData}){
+export default function Card({name,description,image,getItemData,open,close,modalOpen}){
 
     const [count, setCount] = useState(0)
 
@@ -22,6 +22,11 @@ export default function Card({name,description,image,getItemData}){
         }
     }
 
+    function activateModal() {
+        modalOpen ? close() : open()
+        getItemData(name)
+    }
+
     return(
         <div className="flex flex-col items-center text-center border-4 border-blue-100 rounded shadow-xl text-dark_mart justify-evenly w-52 h-80 bg-light_blue">
             <div className="flex items-center justify-center w-2/3 bg-white rounded shadow-md h-1/3">
@@ -29,7 +34,7 @@ export default function Card({name,description,image,getItemData}){
             </div>
             <h1 className="text-xl font-bold font-frag">{name}</h1>
             <p className="px-2 text-sm font-semibold font-frag">{description}</p>
-            <button className="p-1 text-white border-2 rounded bg-slate-600 border-light_haze" onClick={() => getItemData(name)}>Learn More</button>
+            <button className="p-1 text-white border-2 rounded bg-slate-600 border-light_haze" onClick={activateModal}>Learn More</button>
             <div className="flex items-center w-full font-bold text-haze_blue justify-evenly">
                 <button className="flex items-center justify-center w-1/6 h-6 bg-white border-2 rounded-md border-light_haze" onClick={subCount}>-</button>
                 <div className="flex items-center justify-center w-1/3 h-6 bg-white border-2 rounded-md border-light_haze">{count}</div>
