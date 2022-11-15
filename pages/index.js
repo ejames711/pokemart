@@ -22,7 +22,7 @@ export default function Home() {
     const open = () => setModalOpen(true)
 
   return (
-    <div className='relative w-full h-full'>
+    <>
     <Head>
         <title>Pokemart Inc.</title>
         <link rel="icon" type="image/svg" href="/assets/pokeball-white.svg" />
@@ -37,6 +37,6 @@ export default function Home() {
       </AnimatePresence>
       <CardDisplay close={close} open={open} modalOpen={modalOpen} setItemData={setItemData}/>
       <Footer />
-    </div>
+    </>
   )
 }
