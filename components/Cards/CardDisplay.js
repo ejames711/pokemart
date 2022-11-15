@@ -42,11 +42,11 @@ export default function CardDisplay({open,close,modalOpen,setItemData}) {
 
     return(
         <>
-            <h1 className="flex justify-center w-full my-20 font-bold text-7xl text-dark_mart">Shop Our Store</h1>
+            <h1 className="flex justify-center w-full my-20 font-bold text-center text-7xl text-dark_mart">Shop Our Store</h1>
             <ProductSearch setSearch={setSearch}/>
             <div className="flex flex-col items-center justify-center ">
-                <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row md:min-h-[500px]'>
-                    {filteredProducts}
+                <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row min-h-[300px] md:min-h-[500px]'>
+                    {filteredProducts.length > 0 ? filteredProducts : <p className="text-2xl font-semibold text-center">No matching product for search...</p>}
                 </div>
             </div>
         </>
