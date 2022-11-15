@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 
 export default function ProductSearch({search, setSearch}) {
 
@@ -7,8 +7,9 @@ export default function ProductSearch({search, setSearch}) {
     }
 
     return(
-        <div className="flex justify-center mx-auto my-6 w-96">
-            <input type='text' className="w-2/3 border-b-2 md:w-full border-dark_mart outline-0" placeholder=" Search Items..." onChange={handleChange}></input>
+        <div className="flex justify-center mx-auto my-6 border-b-2 w-96 border-dark_mart">
+            <Image src={'/assets/magnify-glass.svg'} height={20} width={20} />
+            <input type='text' className="w-2/3 ml-2 md:w-full outline-0" placeholder=" Search Items..." onChange={handleChange}></input>
         </div>
     )
 }

@@ -42,6 +42,7 @@ export default function CardDisplay({open,close,modalOpen,setItemData}) {
 
     return(
         <>
+            <h1 className="flex justify-center w-full my-20 font-bold text-7xl text-dark_mart">Shop Our Store</h1>
             <ProductSearch setSearch={setSearch}/>
             <div className="flex flex-col items-center justify-center ">
                 <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row md:min-h-[500px]'>
