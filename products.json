@@ -27,12 +27,12 @@
     {
         "name": "Super-Potion",
         "description": "Keep your pokemon in fighting shape. Instant results.",
-        "image": "/assets/super-potion/super-potion.png"
+        "image": "/assets/super-potion/superpotion.png"
     },
     {
         "name": "Hyper-Potion",
         "description": "The ultimate saver. Keep yourself in the match.",
-        "image": "/assets/hyper-potion/hyper-potion.png"
+        "image": "/assets/hyper-potion/hyperpotion.png"
     },
     {
         "name": "Revive",
