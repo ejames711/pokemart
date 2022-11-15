@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Card from './Card'
 import ProductsList from "../../products.json"
-import ProductSearch from '../ProductSearch'
+import ProductSearch from './ProductSearch'
 import axios from "axios"
 
 export default function CardDisplay({open,close,modalOpen,setItemData}) {
