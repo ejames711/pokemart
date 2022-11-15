@@ -2,12 +2,12 @@
     {
         "name": "Poke-Ball",
         "description": "The classic. Always there when you need it.",
-        "image": "/assets/red-ball/pokeball.png"
+        "image": "/assets/poke-ball/pokeball.png"
     },
     {
         "name": "Great-Ball",
         "description": "Increased catch rates. Affordable and dependable.",
-        "image": "/assets/greatball/greatball.png"
+        "image": "/assets/great-ball/greatball.png"
     },
     {
         "name": "Ultra-Ball",
