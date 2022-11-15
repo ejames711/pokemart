@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Card from './Card'
-import ProductsList from "../products.json"
-import ProductSearch from './ProductSearch'
+import ProductsList from "../../products.json"
+import ProductSearch from '../ProductSearch'
 import axios from "axios"
 
 export default function CardDisplay({open,close,modalOpen,setItemData}) {
@@ -10,7 +10,12 @@ export default function CardDisplay({open,close,modalOpen,setItemData}) {
 
     const getItemData = async (name) => {
         const res = await axios.get(`https://pokeapi.co/api/v2/item/${name.toLowerCase()}/`)
-        setItemData(res.data)
+        setItemData({
+            name: res.data.name,
+            category: res.data.category.name,
+            effect: res.data.effect_entries[0].effect,
+            flavor_text: res.data.flavor_text_entries[0].text,
+        })
     }
 
     const filteredProducts = Object.entries(ProductsList)
@@ -38,7 +43,7 @@ export default function CardDisplay({open,close,modalOpen,setItemData}) {
     return(
         <>
             <ProductSearch setSearch={setSearch}/>
-            <div className="flex flex-col justify-center items-center min-h-[400px]">
+            <div className="flex flex-col justify-center items-center min-h-[710px]">
                 <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row'>
                     {filteredProducts}
                 </div>

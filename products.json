@@ -2,12 +2,12 @@
     {
         "name": "Poke-Ball",
         "description": "The classic. Always there when you need it.",
-        "image": "/assets/red-ball/pokeball.png"
+        "image": "/assets/poke-ball/pokeball.png"
     },
     {
         "name": "Great-Ball",
         "description": "Increased catch rates. Affordable and dependable.",
-        "image": "/assets/greatball/greatball.png"
+        "image": "/assets/great-ball/greatball.png"
     },
     {
         "name": "Ultra-Ball",
@@ -27,12 +27,12 @@
     {
         "name": "Super-Potion",
         "description": "Keep your pokemon in fighting shape. Instant results.",
-        "image": "/assets/super-potion/super-potion.png"
+        "image": "/assets/super-potion/superpotion.png"
     },
     {
         "name": "Hyper-Potion",
         "description": "The ultimate saver. Keep yourself in the match.",
-        "image": "/assets/hyper-potion/hyper-potion.png"
+        "image": "/assets/hyper-potion/hyperpotion.png"
     },
     {
         "name": "Revive",
