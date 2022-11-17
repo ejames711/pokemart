@@ -16,7 +16,8 @@
     "framer-motion": "^7.6.6",
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-scroll-into-view": "^1.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
