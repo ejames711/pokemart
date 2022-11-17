@@ -1,20 +1,21 @@
 import { Transition } from "@headlessui/react";
 import { useState } from 'react';
 import Image from "next/image";
+import Cart from "../Cart";
 
-function Nav() {
+function Nav({cartItems}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div className="fixed w-full">
       <nav className="bg-dark_mart">
-        <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-4 max-w-8xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Image
                   width={50}
                   height={50}
-                  src="/assets/pokeball-white.svg"
+                  src="/assets/svg/pokeball-white.svg"
                   alt="Pokeball"
                 />
               </div>
@@ -42,6 +43,7 @@ function Nav() {
                 </div>
               </div>
             </div>
+            <Cart cartItems={cartItems} />
             <div className="flex -mr-2 md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
