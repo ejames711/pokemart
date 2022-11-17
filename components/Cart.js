@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import Image from "next/image";
 
-export default function Cart({cartItems}) {
-    const [cartOpen, setCartOpen] = useState(false)
+export default function Cart({cartItems,cartOpen, setCartOpen}) {
+    
     
     const cart = cartItems.map(({item,quantity}) => {
         return(

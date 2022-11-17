@@ -4,7 +4,7 @@ import Image from "next/image";
 import ScrollTo from 'react-scroll-into-view'
 import Cart from "../Cart";
 
-function Nav({cartItems}) {
+function Nav({cartItems,cartOpen,setCartOpen}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed w-full">
@@ -44,10 +44,10 @@ function Nav({cartItems}) {
                 </div>
               </div>
             </div>
-            <Cart cartItems={cartItems} />
+            <Cart cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen}/>
             <div className="flex -mr-2 md:hidden">
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => cartOpen ? setIsOpen(isOpen) : setIsOpen(!isOpen)}
                 type="button"
                 className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
