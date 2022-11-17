@@ -4,7 +4,14 @@ import ProductsList from "../../products.json"
 import ProductSearch from './ProductSearch'
 import axios from "axios"
 
-export default function CardDisplay({open,close,modalOpen,setItemData}) {
+export default function CardDisplay({
+    open,
+    close,
+    modalOpen,
+    setItemData,
+    cartItems,
+    setCartItems
+}) {
 
     const [search, setSearch] = useState("")
 
@@ -36,6 +43,8 @@ export default function CardDisplay({open,close,modalOpen,setItemData}) {
             open={open}
             close={close}
             modalOpen={modalOpen}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
             />
         ) 
     })
