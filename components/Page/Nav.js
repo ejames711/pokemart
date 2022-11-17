@@ -1,6 +1,7 @@
 import { Transition } from "@headlessui/react";
 import { useState } from 'react';
 import Image from "next/image";
+import ScrollTo from 'react-scroll-into-view'
 import Cart from "../Cart";
 
 function Nav({cartItems}) {
@@ -21,25 +22,25 @@ function Nav({cartItems}) {
               </div>
               <div className="hidden md:block">
                 <div className="flex items-baseline justify-center ml-10 space-x-4">
-                  <a
-                    href="#"
+                  <ScrollTo
+                    selector="#home"
                     className="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
                   >
-                    Dashboard
-                  </a>
-                  <a
-                    href="#"
+                    Home
+                  </ScrollTo>
+                  <ScrollTo
+                    selector="#about"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     About
-                  </a>
+                  </ScrollTo>
 
-                  <a
-                    href="#"
+                  <ScrollTo
+                    selector="#shop"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Shop
-                  </a>
+                  </ScrollTo>
                 </div>
               </div>
             </div>
@@ -103,26 +104,26 @@ function Nav({cartItems}) {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
+                <ScrollTo
+                  selector='#home'
                   className="block px-3 py-2 font-medium text-center text-white rounded-md hover:bg-gray-700"
                 >
-                  Dashboard
-                </a>
+                  Home
+                </ScrollTo>
 
-                <a
-                  href="#"
+                <ScrollTo
+                  selector='#about'
                   className="block px-3 py-2 font-medium text-center text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   About
-                </a>
+                </ScrollTo>
 
-                <a
-                  href="#"
+                <ScrollTo
+                  selector='#shop'
                   className="block px-3 py-2 font-medium text-center text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   Shop
-                </a>
+                </ScrollTo>
               </div>
             </div>
           )}
