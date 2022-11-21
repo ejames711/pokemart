@@ -32,7 +32,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Pokemart offerings and store" />
     </Head>
-      <Nav cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen}/>
+      <Nav 
+      cartItems={cartItems}
+      setCartItems={setCartItems} 
+      cartOpen={cartOpen} 
+      setCartOpen={setCartOpen}/>
       <Header />
       <About />
       <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
@@ -43,8 +47,8 @@ export default function Home() {
       open={open} 
       modalOpen={modalOpen} 
       setItemData={setItemData} 
-      cartItems={cartItems} 
-      setCartItems={setCartItems}/>
+      setCartItems={setCartItems}
+      />
       <Footer />
     </>
   )

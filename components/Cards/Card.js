@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useState } from "react";
-const capitalize = require('capitalize')
 
 export default function Card({
     name,
@@ -10,7 +9,6 @@ export default function Card({
     open,
     close,
     modalOpen,
-    cartItems,
     setCartItems,
 }) {
 
@@ -40,10 +38,9 @@ export default function Card({
 
     function addItemToCart() {
         const newItem = {
-            item: name,
-            quantity: count,
+            item : name,
+            quantity : count,
         }
-
         setCartItems((prevCart) => {
             if( [...prevCart].some(e => e.item === name) || count === 0){
                 return [...prevCart]
@@ -51,7 +48,6 @@ export default function Card({
                 return [...prevCart,newItem]
             }
         })
-        
     }
 
     return(

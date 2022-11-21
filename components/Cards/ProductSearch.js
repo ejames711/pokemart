@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function ProductSearch({search, setSearch}) {
+export default function ProductSearch({setSearch}) {
 
     const handleChange = e => {
         setSearch(e.target.value)

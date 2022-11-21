@@ -9,8 +9,7 @@ export default function CardDisplay({
     close,
     modalOpen,
     setItemData,
-    cartItems,
-    setCartItems
+    setCartItems,
 }) {
 
     const [search, setSearch] = useState("")
@@ -43,7 +42,6 @@ export default function CardDisplay({
             open={open}
             close={close}
             modalOpen={modalOpen}
-            cartItems={cartItems}
             setCartItems={setCartItems}
             />
         ) 
