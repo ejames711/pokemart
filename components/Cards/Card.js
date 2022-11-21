@@ -47,10 +47,9 @@ export default function Card({
         setCartItems((prevCart) => {
             if( [...prevCart].some(e => e.item === name) || count === 0){
                 return [...prevCart]
-            }else{
+            }else {
                 return [...prevCart,newItem]
             }
-           
         })
         
     }
