@@ -24,9 +24,9 @@ export default function CartItem({cartItems, setCartItems, item, quantity, image
     
 
     return(
-        <div className="flex items-center w-full shrink-0 h-20 gap-4 font-semibold text-center rounded-sm shadow lg:min-w-[400px] justify-evenly px-1 my-2 bg-slate-300">
+        <div className="flex items-center w-full shrink-0 h-20 gap-4 font-semibold text-center rounded-sm shadow lg:min-w-[400px] justify-between px-1 my-2 bg-slate-300">
             <Image height={50} width={50} alt={item} src={image}/>
-            <h1 className="md:text-xl">{item.replace('-', ' ')}</h1>
+            <h1 className="w-16 md:text-xl">{item.replace('-', ' ')}</h1>
             <p>Qty: {newItemCount !== quantity ? newItemCount : quantity}</p>
             <div className="flex flex-col items-center justify-evenly">
                 <div className="text-2xl">
