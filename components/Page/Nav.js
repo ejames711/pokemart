@@ -4,7 +4,7 @@ import Image from "next/image";
 import ScrollTo from 'react-scroll-into-view'
 import Cart from "../Cart";
 
-function Nav({cartItems,cartOpen,setCartOpen}) {
+function Nav({cartItems, setCartItems, cartOpen, setCartOpen}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed w-full">
@@ -44,7 +44,12 @@ function Nav({cartItems,cartOpen,setCartOpen}) {
                 </div>
               </div>
             </div>
-            <Cart cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen}/>
+            <Cart 
+            cartItems={cartItems} 
+            setCartItems={setCartItems}
+            cartOpen={cartOpen} 
+            setCartOpen={setCartOpen}
+            />
             <div className="flex -mr-2 md:hidden">
               <button
                 onClick={() => cartOpen ? setIsOpen(isOpen) : setIsOpen(!isOpen)}
