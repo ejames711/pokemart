@@ -18,7 +18,7 @@ export default function About() {
                         <li>Dedicated to your success as a trainer</li>
                     </ul>
                 </div>
-                <Image src={'/assets/mart.webp'} height={800} width={900}/>
+                <Image src={'/assets/mart.webp'} height={800} width={900} alt='pokemart'/>
             </div>
         </>
     )

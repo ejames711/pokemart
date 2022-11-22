@@ -40,6 +40,7 @@ export default function Card({
         const newItem = {
             item : name,
             quantity : count,
+            image : image,
         }
         setCartItems((prevCart) => {
             if( [...prevCart].some(e => e.item === name) || count === 0){
@@ -51,7 +52,7 @@ export default function Card({
     }
 
     return(
-        <div className="flex flex-col items-center text-center border-4 border-blue-100 rounded shadow-xl text-dark_mart justify-evenly w-52 h-80 bg-light_blue">
+        <div className="flex flex-col items-center text-center border-4 border-blue-100 rounded shadow-xl shrink-0 text-dark_mart justify-evenly w-52 h-80 bg-light_blue">
             <div className="flex items-center justify-center w-2/3 bg-white rounded shadow-md h-1/3">
                 <Image src={image} height={96} width={96} alt={name}/>
             </div>
