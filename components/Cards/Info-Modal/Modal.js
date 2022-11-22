@@ -32,7 +32,7 @@ export default function Modal({handleClose,itemData}) {
         <Backdrop onClick={handleClose}>
             <motion.div
             onClick={(e) => e.stopPropagation()}
-            className='w-2/3 md:w-[700px] md:max-w-5/6 min-h-[350px] m-auto px-8 pb-8 rounded-lg flex flex-col bg-light_blue text-dark_mart font-semibold'
+            className='w-2/3 md:w-[700px] md:max-w-5/6 min-h-[350px] max-h-screen overflow-y-auto m-auto px-8 pb-8 rounded-lg flex flex-col bg-light_blue text-dark_mart font-semibold'
             variants={dropIn}
             initial="hidden"
             animate="visible"
