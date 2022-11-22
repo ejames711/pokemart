@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Image from "next/image";
 import CartItem from './CartItem';
+import Link from 'next/link';
 
 export default function Cart({cartItems, setCartItems, cartOpen, setCartOpen}) {
 
@@ -26,7 +27,7 @@ export default function Cart({cartItems, setCartItems, cartOpen, setCartOpen}) {
                 <div className='relative flex flex-col justify-center'>
                     {cart.length > 0 ? cart : <h1 className='h-24 my-8 text-xl font-bold text-gray-500'>Nothing in cart...</h1>}
                 </div> 
-                <button className='p-1 border-2 rounded border-light_haze bg-dark_mart text-light_blue'>Checkout</button>
+                <button className='p-1 border-2 rounded border-light_haze bg-dark_mart text-light_blue'><Link href={'/checkout'} >Checkout</Link></button>
             </div> 
             : 
             <></>
