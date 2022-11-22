@@ -18,7 +18,7 @@ export default function Cart({cartItems, setCartItems, cartOpen, setCartOpen}) {
     })
     
     return(
-        <div className="flex flex-col items-center w-full md:items-end">
+        <div className="flex flex-col items-center md:items-end">
             <Image src={'/assets/svg/empty-cart.svg'}  height={40} width={40} alt='cart' className="hover:cursor-pointer" onClick={() => setCartOpen(!cartOpen)}/>
             {cartOpen ?
                 <div className="absolute flex flex-col items-center p-2 bg-white rounded shadow-xl top-14 w-96 lg:w-[500px] max-h-96 overflow-y-auto">
