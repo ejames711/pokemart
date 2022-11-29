@@ -9,6 +9,7 @@ export default function Cart({cartOpen, setCartOpen}) {
 
     const cartDisplay = cart?.map((item) => (
         <CartItem 
+        key={item.id}
         id={item.id}
         name={item.name}
         image={item.image}
