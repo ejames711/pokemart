@@ -1,43 +1,59 @@
 [
     {
+        "id":1,
         "name": "Poke-Ball",
         "description": "The classic. Always there when you need it.",
-        "image": "/assets/poke-ball/pokeball.png"
+        "image": "/assets/poke-ball/pokeball.png",
+        "price": 200
     },
     {
+        "id":2,
         "name": "Great-Ball",
         "description": "Increased catch rates. Affordable and dependable.",
-        "image": "/assets/great-ball/greatball.png"
+        "image": "/assets/great-ball/greatball.png",
+        "price": 600
     },
     {
+        "id":3,
         "name": "Ultra-Ball",
         "description": "The best catch rates. Premium performance and quality.",
-        "image": "/assets/ultra-ball/ultraball.png"
+        "image": "/assets/ultra-ball/ultraball.png",
+        "price": 800
     },
     {
+        "id":4,
         "name": "Master-Ball",
         "description": "Guaranteed catch. It doesn't get any better than this.",
-        "image": "/assets/master-ball/masterball.png"
+        "image": "/assets/master-ball/masterball.png",
+        "price": 1000
     },
     {
+        "id":5,
         "name": "Potion",
         "description": "Quick results to get your team back in the game.",
-        "image": "/assets/potion/potion.png"
+        "image": "/assets/potion/potion.png",
+        "price": 300
     },
     {
+        "id":6,
         "name": "Super-Potion",
         "description": "Keep your pokemon in fighting shape. Instant results.",
-        "image": "/assets/super-potion/superpotion.png"
+        "image": "/assets/super-potion/superpotion.png",
+        "price": 700
     },
     {
+        "id":7,
         "name": "Hyper-Potion",
-        "description": "The ultimate saver. Keep yourself in the match.",
-        "image": "/assets/hyper-potion/hyperpotion.png"
+        "description": "The ultimate life saver. Keep yourself in the match.",
+        "image": "/assets/hyper-potion/hyperpotion.png",
+        "price": 1200
     },
     {
+        "id":8,
         "name": "Revive",
         "description": "For those moments you thought the fight was already over.",
-        "image": "/assets/revive/revive.png"
+        "image": "/assets/revive/revive.png",
+        "price": 1500
     }
     
 ]

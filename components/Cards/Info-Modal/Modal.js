@@ -26,8 +26,6 @@ const dropIn = {
 
 export default function Modal({handleClose,itemData}) {
 
-    console.log(itemData)
-
     return(
         <Backdrop onClick={handleClose}>
             <motion.div
@@ -40,7 +38,7 @@ export default function Modal({handleClose,itemData}) {
             >
                 <button onClick={handleClose} className='absolute left-0 w-10 m-2 text-2xl rounded'>X</button>
                 <div className='flex flex-col items-center gap-4 mt-8 md:ml-8 md:w-2/3 md:justify-between md:flex-row'>
-                    <Image src={`/assets/${itemData.name}/${itemData.name.replace('-','')}.png`} height={96} width={96} alt={itemData.name} className='bg-white rounded-md' />
+                    <Image src={`/assets/${itemData.name.replace(' ','-')}/${itemData.name.replace('-','')}.png`} height={96} width={96} alt={itemData.name} className='bg-white rounded-md' />
                     <h1 className='text-6xl text-center underline'>{capitalize.words(itemData.name.replace('-',' '))}</h1>
                 </div>
                 <div className='flex flex-col gap-8 mt-8 text-xl text-center'>

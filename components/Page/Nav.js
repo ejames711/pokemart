@@ -45,8 +45,6 @@ function Nav({cartItems, setCartItems, cartOpen, setCartOpen}) {
               </div>
             </div>
             <Cart 
-            cartItems={cartItems} 
-            setCartItems={setCartItems}
             cartOpen={cartOpen} 
             setCartOpen={setCartOpen}
             />
