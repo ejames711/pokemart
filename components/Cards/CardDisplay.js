@@ -9,7 +9,6 @@ export default function CardDisplay({
     close,
     modalOpen,
     setItemData,
-    setCartItems,
 }) {
 
     const [search, setSearch] = useState("")
@@ -31,18 +30,19 @@ export default function CardDisplay({
             .includes(search.toLowerCase())
         )
     })
-    .map(([index, {name,description,image}]) => {
+    .map(([index, {id,name,description,image,price}]) => {
         return(
             <Card 
-            key={index}
+            key={id}
+            id={id}
             name={name}
             description={description}
             image={image}
+            price={price}
             getItemData={getItemData}
             open={open}
             close={close}
             modalOpen={modalOpen}
-            setCartItems={setCartItems}
             />
         ) 
     })
