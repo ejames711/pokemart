@@ -17,9 +17,18 @@ export default function Cart({cartOpen, setCartOpen}) {
         quantity={item.quantity}
         />
     ))
+
+    const getTotal = () => {
+        let totalQuantity = 0
+        cart.forEach(item => {
+          totalQuantity += item.quantity
+        })
+        return {totalQuantity}
+      }
     
     return(
         <div className="flex flex-col items-center md:items-end">
+            <div className={getTotal().totalQuantity <= 0 ? "hidden" : "absolute flex items-center justify-center w-6 h-6 p-1 ml-2 text-white bg-black rounded-full top-6 hover:cursor-pointer"} onClick={() => setCartOpen(!cartOpen)}>{getTotal().totalQuantity}</div>
             <Image src={'/assets/svg/empty-cart.svg'}  height={40} width={40} alt='cart' className="hover:cursor-pointer" onClick={() => setCartOpen(!cartOpen)}/>
             {cartOpen ?
                 <div className="absolute flex flex-col items-center p-2 bg-white rounded shadow-xl top-14 w-96 lg:w-[500px] max-h-96 overflow-y-auto">
