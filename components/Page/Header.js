@@ -1,4 +1,4 @@
-import slideIn from "../../animations/slidein"
+import slideIn from "../../animations/slideIn"
 import { motion } from "framer-motion"
 
 export default function Header(){
