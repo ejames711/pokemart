@@ -19,7 +19,7 @@ export default function OrderSummary(){
 
     
     return (
-        <div className="p-4 shadow-lg md:w-1/4">
+        <div className="p-4 shadow md:w-1/4">
             <h2 className="text-2xl font-bold text-center md:text-start">Order Summary</h2>
             <div className="flex flex-col">
                 {checkoutDisplay}

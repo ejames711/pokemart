@@ -7,7 +7,7 @@ import Cart from "../Cart";
 function Nav({cartItems, setCartItems, cartOpen, setCartOpen}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed w-full">
+    <div className="fixed z-10 w-full ">
       <nav className="bg-dark_mart">
         <div className="px-4 max-w-8xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -34,7 +34,6 @@ function Nav({cartItems, setCartItems, cartOpen, setCartOpen}) {
                   >
                     About
                   </ScrollTo>
-
                   <ScrollTo
                     selector="#shop"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
