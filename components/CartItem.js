@@ -20,7 +20,7 @@ export default function CartItem({id, name, image, price, quantity}) {
     }
 
     return(
-        <motion.div className="flex items-center w-full shrink-0 h-20 gap-4 font-semibold text-center rounded-sm shadow lg:min-w-[400px] justify-between px-1 my-2 bg-slate-300" 
+        <motion.div className="flex items-center w-full shrink-0 h-20 gap-4 font-semibold text-center rounded-sm shadow lg:min-w-[400px] justify-between px-1 my-2" 
         variants={fadeIn} 
         initial="hidden" 
         animate="visible"

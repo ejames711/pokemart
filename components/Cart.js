@@ -40,7 +40,7 @@ export default function Cart({cartOpen, setCartOpen}) {
       }
     
     return(
-        <div className="flex flex-col items-center w-full md:items-end" >
+        <div className="flex flex-col items-center md:items-end" >
             <div className={getTotal().totalQuantity <= 0 ? "hidden" : "absolute flex items-center justify-center w-6 h-6 p-1 text-white bg-black rounded-full top-6 hover:cursor-pointer"} onClick={() => setCartOpen(!cartOpen)}>{getTotal().totalQuantity}</div>
             <Image src={'/assets/svg/empty-cart.svg'}  height={50} width={50} alt='cart' className="p-1 rounded hover:cursor-pointer hover:bg-slate-600" onClick={() => setCartOpen(!cartOpen)}/>
             {cartOpen ?
