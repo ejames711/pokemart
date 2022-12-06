@@ -10,7 +10,7 @@ export default function Checkout() {
             <div className="flex items-center w-full justify-evenly md:justify-between">
                 <div className="flex items-center md:ml-8">
                     <Link href={'/'}>
-                        <Image src={'/assets/svg/pokeball-black.svg'} height={80} width={80}/>
+                        <Image src={'/assets/svg/pokeball-black.svg'} height={80} width={80} alt="pokeball"/>
                     </Link>
                     <h1 className="ml-6 text-3xl font-bold">Cart</h1>
                 </div>
