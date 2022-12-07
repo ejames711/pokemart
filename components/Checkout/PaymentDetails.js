@@ -31,7 +31,7 @@ export default function PaymentDetails(){
       }
 
     return(
-        <div className="flex flex-col items-center w-full gap-2 p-4 rounded shadow md:items-start h-fit md:w-1/2">
+        <div className="flex flex-col items-center w-full gap-2 p-4 rounded shadow md:items-start h-fit md:w-1/3">
             <h2 className="text-2xl font-bold">Payment Details</h2>
             <p className="w-64 font-semibold text-center text-gray-800 md:text-start">Complete your order by providing fulfillment details below.</p>
             <p className="w-2/3 font-semibold text-center text-red-400 md:text-start">Warning! This contact info is stored in a test database! Only use info you are comfortable sharing!</p>

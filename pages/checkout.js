@@ -18,7 +18,7 @@ export default function Checkout() {
                     <Image src={'/assets/home.svg'} height={50} width={50} className='md:mr-10' alt='home'/>
                 </Link>
             </div>
-            <div className="flex flex-col w-full md:mt-10 md:flex-row justify-evenly md:justify-between md:mx-2 lg:justify-evenly">
+            <div className="flex flex-col justify-between w-full md:mt-10 md:flex-row lg:mx-2 lg:justify-evenly">
                 <OrderSummary />
                 <PaymentDetails />
             </div>

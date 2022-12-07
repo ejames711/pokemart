@@ -8,7 +8,7 @@ export default function CheckoutItem({id, name, image, price, quantity}){
     const dispatch = useDispatch()
 
     return(
-        <div className="flex items-center w-full md:w-2/3 shrink-0 h-20 gap-4 font-semibold text-center rounded-sm lg:min-w-[400px] justify-between px-1 my-2 bg-white">
+        <div className="flex items-center w-full lg:w-2/3 shrink-0 h-20 gap-4 font-semibold text-center rounded-sm lg:min-w-[400px] justify-between px-1 my-2 bg-white">
             <Image height={50} width={50} alt={name} src={image}/>
             <h1 className="w-16 font-bold md:text-xl">{name.replace('-',' ')}</h1>
             <p>Qty: {quantity}</p>
