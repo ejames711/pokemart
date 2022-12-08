@@ -3,23 +3,31 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { sendPaymentForm } from "../../lib/api"
 
+const initValues = { name: '', email: '', address: '' }
+
+const initState = {formValues: initValues, currentCart: []}
+
 export default function PaymentDetails(){
 
     const cart = useSelector((state) => state.cartReducer.cart)
 
-    const [formValues, setFormValues] = useState({
-      name: '',
-      email: '',
-      address: '',
-    })
+    const [state,setState] = useState(initState)
 
-    const handleChange = ({target}) => setFormValues((prevFormValues) => ({
-      ...prevFormValues,
-      [target.name]: target.value,
-    }))
+    const {formValues} = state
 
-    const onSubmit = async () => {
-      await sendPaymentForm(formValues)
+    const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      formValues: {
+        ...prev.formValues,
+        [target.name]: target.value,
+      },
+      currentCart : cart
+    }));
+
+    const onSubmit = async (e) => {
+      e.preventDefault()
+      await sendPaymentForm(state)
     }
 
     const getTotal = () => {
@@ -50,7 +58,7 @@ export default function PaymentDetails(){
                   }}
                 whileTap={{ scale: 0.9 }}
                 disabled = { !formValues.name || !formValues.email || !formValues.address }
-                onClick={onSubmit}
+                onClick={(e) => onSubmit(e)}
                 >Checkout</motion.button>
             </form>
         </div>
