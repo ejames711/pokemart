@@ -22,8 +22,10 @@ const generateEmailContent = (data) => {
             (str += `${name}: \n${quantity} \n \n`),
         ""
     );
+
+    const priceStringData = String(data.totalPrice)
     
-    const stringData = formStringData + cartStringData
+    const stringData = formStringData + cartStringData + priceStringData
     
     const formHtmlData = Object.entries(data.formValues).reduce((str, [key, val]) => {
     return (str += `<h3 class="form-heading" align="left">${PAYMENT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
@@ -33,10 +35,12 @@ const generateEmailContent = (data) => {
         return [item.name,item.quantity]
     })
     .reduce((str, [name, quantity]) => {
-    return (str += `<h3 class="form-heading" align="left">${name}</h3><p class="form-answer" align="left">${quantity}</p>`);
+    return (str += `<p align="left">${name}</p><p class="form-answer" align="left">${quantity}</p>`);
     }, "");
 
-    const htmlData = formHtmlData + cartHtmlData
+    const priceHtmlData = `<h3>Total:</h3><p align="left">$${String(data.totalPrice)}</p>`
+
+    const htmlData = formHtmlData + cartHtmlData + priceHtmlData
 
     return {
     text: stringData,
@@ -47,7 +51,6 @@ const generateEmailContent = (data) => {
 const handler = async (req,res) => {
     if (req.method === "POST") {
         const data = req.body
-        console.log(data)
         if ( !data.formValues.name || !data.formValues.email || !data.formValues.address || !data.currentCart) {
             return res.status(400).json({message: "Invalid Request"})
         }
