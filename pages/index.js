@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 export default function Home() {
-  const [cartOpen, setCartOpen] = useState(false)
+  
 
   //modal
   const [modalOpen, setModalOpen] = useState(false)
@@ -30,9 +30,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Pokemart offerings and store" />
     </Head>
-      <Nav  
-      cartOpen={cartOpen} 
-      setCartOpen={setCartOpen}/>
+      <Nav />
       <Header />
       <About />
       <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
