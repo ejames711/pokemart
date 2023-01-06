@@ -8,8 +8,8 @@ import Modal from '../components/Cards/Info-Modal/Modal'
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
+
 export default function Home() {
-  
 
   //modal
   const [modalOpen, setModalOpen] = useState(false)

@@ -6,3 +6,17 @@
     font-family: frag;
     src: url("/assets/frag-mono/frag-regular.ttf");
 }
+
+.account-line {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.signup-button {
+    background-color: aqua;
+}
+
+.signup-input {
+    background-color: aqua;
+}
