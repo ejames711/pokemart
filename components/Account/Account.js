@@ -7,7 +7,6 @@ export default function Account({ session }) {
   const [loading, setLoading] = useState(true)
   const [username, setUsername] = useState(null)
   const [website, setWebsite] = useState(null)
-  const [avatar_url, setAvatarUrl] = useState(null)
 
   useEffect(() => {
     getProfile()
@@ -90,8 +89,8 @@ export default function Account({ session }) {
 
       <div>
         <button
-          className="block w-24 p-1 mx-auto mt-10 text-lg font-semibold rounded button primary bg-light_blue text-dark_mart"
-          onClick={() => updateProfile({ username, website, avatar_url })}
+          className="w-24 p-1 mx-auto mt-10 text-lg font-semibold rounded bg-light_blue text-dark_mart"
+          onClick={() => updateProfile({ username, website})}
           disabled={loading}
         >
           {loading ? 'Loading ...' : 'Update'}
@@ -99,7 +98,7 @@ export default function Account({ session }) {
       </div>
 
       <div>
-        <button className="block w-24 p-1 mx-auto mt-2 text-lg font-semibold rounded button bg-light_blue text-dark_mart" onClick={() => supabase.auth.signOut()}>
+        <button className="w-24 p-1 mx-auto mt-2 text-lg font-semibold rounded bg-light_blue text-dark_mart" onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>
       </div>
