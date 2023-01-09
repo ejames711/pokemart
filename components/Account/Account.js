@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
+import { toast, Toaster } from 'react-hot-toast'
 
 export default function Account({ session }) {
   const supabase = useSupabaseClient()
@@ -38,7 +39,7 @@ export default function Account({ session }) {
     }
   }
 
-  async function updateProfile({ username, website, avatar_url }) {
+  async function updateProfile({ username, website }) {
     try {
       setLoading(true)
 
@@ -51,9 +52,9 @@ export default function Account({ session }) {
 
       let { error } = await supabase.from('profiles').upsert(updates)
       if (error) throw error
-      alert('Profile updated!')
+      toast.success('Profile updated!')
     } catch (error) {
-      alert('Error updating the data!')
+      toast.error('Error updating the data!')
       console.log(error)
     } finally {
       setLoading(false)
@@ -61,7 +62,9 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="flex flex-col gap-2 p-6 m-auto text-center rounded bg-light_haze w-96 h-[450px]">
+    <>
+    <Toaster />
+    <div className="flex flex-col gap-2 p-6 m-auto text-center rounded bg-light_haze w-96 h-[450px] border-2 border-light_blue">
       <div className='account-line'>
         <label htmlFor="email" className='text-xl font-semibold text-white'>Email</label>
         <input id="email" type="text" value={session.user.email} className="h-10 font-medium text-center text-gray-700 rounded-sm" disabled />
@@ -103,5 +106,6 @@ export default function Account({ session }) {
         </button>
       </div>
     </div>
+    </>
   )
 }

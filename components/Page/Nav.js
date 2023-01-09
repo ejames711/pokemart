@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from "next/image";
 import ScrollTo from 'react-scroll-into-view'
 import Cart from "../Cart";
+import Link from "next/link";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,11 +41,14 @@ function Nav() {
                   >
                     Shop
                   </ScrollTo>
+                  <Link href={'/user'}>
+                    <button className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Sign In </button>
+                  </Link>
                 </div>
               </div>
             </div>
-            <Cart 
-            />
+              <Cart />
+            
             <div className="flex -mr-2 md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
