@@ -12,6 +12,10 @@
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@reduxjs/toolkit": "^1.9.0",
+    "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/auth-ui-react": "^0.2.6",
+    "@supabase/supabase-js": "^2.2.3",
     "axios": "^1.1.3",
     "capitalize": "^2.0.4",
     "dotenv": "^16.0.3",
@@ -20,6 +24,7 @@
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
     "react-redux": "^8.0.5",
     "react-scroll-into-view": "^1.12.0",
     "redux-persist": "^6.0.0"
