@@ -1,5 +1,6 @@
 import { Transition } from "@headlessui/react";
 import { useState } from 'react';
+import { useSession} from '@supabase/auth-helpers-react'
 import Image from "next/image";
 import ScrollTo from 'react-scroll-into-view'
 import Cart from "../Cart";
@@ -7,6 +8,8 @@ import Link from "next/link";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const session = useSession()
+  
   return (
     <div className="fixed z-10 w-full ">
       <nav className="bg-dark_mart">
@@ -42,7 +45,7 @@ function Nav() {
                     Shop
                   </ScrollTo>
                   <Link href={'/user'}>
-                    <button className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Sign In </button>
+                    <button className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">{!session ? "Sign In" : "Account"} </button>
                   </Link>
                 </div>
               </div>
@@ -128,6 +131,10 @@ function Nav() {
                 >
                   Shop
                 </ScrollTo>
+
+                <Link href={'/user'} className="block px-3 py-2 font-medium text-center text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">
+                  <button >{!session ? "Sign In" : "Account"}</button>
+                </Link>
               </div>
             </div>
           )}

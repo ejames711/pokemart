@@ -21,7 +21,7 @@ export default function SignIn() {
       return {data,error}
     }
 
-    async function signUpWithEmail() {
+    async function signUpWithEmail(email,password) {
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -52,8 +52,8 @@ export default function SignIn() {
     return(
       <>
       <Toaster />
-      <Link href={'/'}>
-        <Image width={150} height={150} src={"/assets/svg/pokeball-white.svg"} alt="pokeball"  className='mx-auto'/>
+      <Link href={'/'} >
+        <Image width={150} height={150} src={"/assets/svg/pokeball-white.svg"} alt="pokeball" className='mx-auto'/>
       </Link>
       <div className="flex flex-col gap-2 p-6 m-auto text-center rounded bg-light_haze w-full md:w-96 h-[450px] border-2 border-light_blue shadow-lg mt-4">
       <div className='account-line'>
@@ -83,7 +83,7 @@ export default function SignIn() {
         }}
         whileTap={{ scale: 0.8 }}
           disabled = {loading || email === "" || password === ""}
-          className={email === "" || password === "" ? "p-2 m-auto mt-10 text-lg font-semibold rounded w-80 button primary bg-haze_blue text-dark_mart" : "p-2 m-auto mt-10 text-lg font-semibold rounded w-80 button primary bg-light_blue text-dark_mart hover:shadow-lg"}
+          className={email === "" || password === "" ? "p-2 m-auto mt-10 text-lg font-semibold rounded w-full button primary bg-haze_blue text-dark_mart" : "p-2 m-auto mt-10 text-lg font-semibold rounded w-80 button primary bg-light_blue text-dark_mart hover:shadow-lg"}
           onClick={() => attemptSignInOrSignUp()}
         >
           {loading ? "Loading..." : mode === "signIn" ? "Sign In" : "Sign Up"}
