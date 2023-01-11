@@ -68,7 +68,7 @@ export default function Account({ session }) {
     <>
     <Toaster />
     <div className="flex flex-col gap-2 p-4 m-auto text-center rounded bg-light_haze w-96 h-full md:h-[550px] border-2 border-light_blue">
-    <Image src={'/assets/profile-white.svg'} width={60} height={60} className="mx-auto" />
+    <Image src={'/assets/profile-white.svg'} width={60} height={60} className="mx-auto" alt="profile" />
       <div className='account-line'>
         <label htmlFor="email" className='text-xl font-semibold text-white'>Email</label>
         <input id="email" type="text" value={session.user.email} className="h-10 font-medium text-center text-gray-700 rounded-sm" disabled />

@@ -3,6 +3,7 @@ import Card from './Card'
 import ProductsList from "../../products.json"
 import ProductSearch from './ProductSearch'
 import axios from "axios"
+import ProductFilter from "./ProductFilter"
 
 export default function CardDisplay({
     open,
@@ -12,6 +13,9 @@ export default function CardDisplay({
 }) {
 
     const [search, setSearch] = useState("")
+    const [filterValue, setFilterValue] = useState("")
+
+    console.log(filterValue)
 
     const getItemData = async (name) => {
         const res = await axios.get(`https://pokeapi.co/api/v2/item/${name.toLowerCase()}/`)
@@ -25,10 +29,15 @@ export default function CardDisplay({
 
     const filteredProducts = Object.entries(ProductsList)
     .filter(([_, product]) => {
+        if(search || filterValue !== "") {
         return(
             product.name.toLowerCase()
-            .includes(search.toLowerCase())
+            .includes(search.toLowerCase()) &&
+            product.category.includes(filterValue)
         )
+        } else {
+            return product
+        }
     })
     .map(([index, {id,name,description,image,price}]) => {
         return(
@@ -50,7 +59,11 @@ export default function CardDisplay({
     return(
         <>
             <h1 className="flex justify-center w-full my-20 font-bold text-center text-7xl text-dark_mart" id="shop">Shop Our Store</h1>
-            <ProductSearch setSearch={setSearch}/>
+            <div className="flex flex-col justify-center w-full md:flex-row">
+                <ProductSearch setSearch={setSearch}/>
+                <ProductFilter setFilterValue={setFilterValue} />
+            </div>
+            
             <div className="flex flex-col items-center justify-center ">
                 <div className='flex flex-col flex-wrap items-center justify-center w-3/5 gap-10 my-4 md:flex-row min-h-[300px] md:min-h-[500px]' >
                     {filteredProducts.length > 0 ? filteredProducts : <p className="text-2xl font-semibold text-center">No matching product for search...</p>}
