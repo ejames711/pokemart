@@ -90,7 +90,7 @@ export default function SignIn() {
         </motion.button>
       </div>
 
-      <div className='mt-6 text-dark_mart'>
+      <div className='flex flex-col mt-6 text-dark_mart'>
       {mode === "signUp" ? "Already a member?" : "Not a member?"} 
         <motion.button 
         whileHover={{
