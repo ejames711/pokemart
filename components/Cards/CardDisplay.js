@@ -15,7 +15,6 @@ export default function CardDisplay({
     const [search, setSearch] = useState("")
     const [filterValue, setFilterValue] = useState("")
 
-    console.log(filterValue)
 
     const getItemData = async (name) => {
         const res = await axios.get(`https://pokeapi.co/api/v2/item/${name.toLowerCase()}/`)
