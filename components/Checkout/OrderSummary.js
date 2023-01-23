@@ -19,7 +19,7 @@ export default function OrderSummary(){
 
     
     return (
-        <div className="p-4 shadow md:w-96">
+        <div className="p-4">
             <h2 className="text-2xl font-bold text-center md:text-start">Order Summary</h2>
             <div className="flex flex-col">
                 {checkoutDisplay.length > 0 ? checkoutDisplay : <p className="m-auto mt-40 text-xl font-semibold text-gray-700">No items in cart...</p>}

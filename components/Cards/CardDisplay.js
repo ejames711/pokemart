@@ -28,15 +28,19 @@ export default function CardDisplay({
 
     const filteredProducts = Object.entries(ProductsList)
     .filter(([_, product]) => {
-        if(search || filterValue !== "") {
+        if(search) {
         return(
             product.name.toLowerCase()
+            .includes(search.toLowerCase()) 
+        )
+        } else if(search || filterValue) {
+            return product.name.toLowerCase()
             .includes(search.toLowerCase()) &&
             product.category.includes(filterValue)
-        )
         } else {
             return product
         }
+        
     })
     .map(([index, {id,name,description,image,price}]) => {
         return(
