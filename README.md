@@ -18,17 +18,35 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Live Demo
 
-To learn more about Next.js, take a look at the following resources:
+https://pokemart-two.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## What is this?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I created this project as an example for an E-Commerce layout with functionality.
 
-## Deploy on Vercel
+Technologies used:
+Next.JS
+Redux
+Supabase/PostgreSQL
+Vercel
+Axios
+Nodemailer
+TailwindCSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+It uses Next for the front end to dynamically populate the item cards. 
+The item info modals are populated with data from the PokeAPI that is called using Axios. 
+Redux is used to have a single source of truth for the cart state while transferring between pages. 
+The Nodemailer API is called using Next API routes to send the user a mock reciept to theri email at checkout.
+I later added Supabase that uses PostreSQL in order to add the ability to create and update users, as well as user authentication.
+The live demo was deployed with Vercel.
+TailwindCSS was used for styling and Framer Motion library for animations.
+The original design and layout was created in Figma. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## How to use
+Navigate to store section of the page and add items to cart with the "Add Item" button. Item quantity can be increased and decreased as well as removed in the cart component located in the navbar.
+More item info can be viewed by clicking "Learn More" which will populate a modal with the PokeAPI info pertaining to that item.
+You can navigate to the checkout page by clicking the "Checkout" button in the cart.
+The mock receipt will be sent to whatever email address is input to the form along with the address and name info.
+Sign in/ Sign up is also located in the navbar and will bring the user to a seperate sign in page. The user can create an account or sign in and update an existing account once authenticated by the form.
